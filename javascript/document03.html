@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#d_main {
+            width: 80%;
+            margin: 0px auto;
+            background-color: rgb(156, 231, 159);
+            padding: 20px;
+        }
+
+        div#d_sub_1 {
+            width: 80%;
+            margin: 30px auto;
+            background-color: rgb(64, 197, 81);
+            padding: 10px;
+        }
+
+        div#d_sub_1 p {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+            background-color: rgb(29, 143, 38);
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="d_main">
+        <div id="d_sub_1">
+            <p>대한민국</p>
+            <p>우리나라</p>
+            <p>Republic of Korea</p>
+            <p>Today</p>
+            <p>Yesterday</p>
+            <ul>
+                <li>가</li>
+                <li>나</li>
+                <li>다</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    // body 이후에 script를 사용하는 이유
+    // 변수는 항상 선언한 후 사용할 수 있기 때문에
+    // 만들어진 것으로 사용하므로 밑에 사용해야 한다.
+    // 스타일은 미리 만들어서 끌어다 ㅆ느는 느낌
+
+    /*
+    HTML의 각 요소가 화면에 그려지기 전에는 아무리 Selector를 수행하고
+    event를 add해도 소용이 없다
+
+    때문에 document 객체에 event를 먼저 설정하는데 
+    화면에 모든 요소가 정상적으로 작동 된 후에
+    다른 요소에 event가 설정되도록 만든다.
+    */
+    document.addEventListener("DOMContentLoaded", function(){
+        document.querySelector("div#d_sub_1")
+    .addEventListener("click",function(ev){
+        let text = ev.target.textContent
+        alert("나는 " + text + "입니다")
+    })
+
+    })
+
+
+    // 현재 화면에 p tag가 1개 뿐이기 때문에
+    // Selector()를 사용하여 선택해도 된다.
+    //          SelectorAll() 전체를 배열로 가져오기
+    //          Selector(tag) : 처음으로 나타나는 요소만
+
+    // "div#d_sub_1"은 crrunttarget으로 설정하여 
+    // 그 내부에 있는 이벤트들을 전달하여 사용할 수 있게 만들었음
+
+    // document.querySelector("div#d_sub_1")
+    // .addEventListener("click",function(ev){
+    //     // alert("나는 초록 박스 입니다.")
+    //     let text = ev.target.textContent
+    //     // let message = String.format("나는 %s 입니다", text)
+    //     // alert(message)
+    //     alert("나는 " + text + "입니다")
+    // })
+
+</script>
+</html>
