@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 25%;
+        border: 10px solid green;
+        margin: 10px;
+      }
+      /*
+      img를 포함하는 box의 orverflow를 설정
+      hiddn : 박스크기에 맞게 이미지 자르기
+      scroll : 강제로(항상) 스크롤바를 보여주고 box내에서 이미지 확인
+      auto : 이미지가 box보다 크면 scroll을 보이고 그렇지 않으면 스크롤이 보이지 않고 평소대로 보이기
+      */
+      div#div1 {
+        overflow: hidden; /* 박스크기를 벗어나면 사진이 박스크기에 맞게 잘림 */
+      }
+      div#div2 {
+        overflow: scroll; /* 무조건 스크롤바를 보여준다 */
+      }
+      div#div3 {
+        overflow: auto;
+      }
+      img {
+        width: 500px;
+      }
+      /*
+      img tag에 float 속성을 부여하면 이후에 있는 본문이 이미지 주변을 흐르는 것처럼 배치가 된다.
+      */
+
+      div#div4 img {
+        width: 100px;
+        margin: 10px;
+        float: left;
+      }
+
+      div#div5 img {
+        width: 100px;
+        float: left;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <img src="../2021.jpg" alt="2021 이미지" />
+    </div>
+    <div id="div2">
+      <img src="../2021.jpg" alt="2021 이미지" />
+    </div>
+    <div id="div3">
+      <img src="../2021.jpg" alt="2021 이미지" />
+    </div>
+    <div id="div4">
+      <img src="../2021.jpg" width="100px" alt="2021 이미지" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa
+        sunt, vel quas ad voluptates omnis nostrum repudiandae laboriosam fugit,
+        qui placeat dolorum reprehenderit voluptate quo exercitationem facilis
+        veritatis accusamus.
+      </p>
+    </div>
+    <div id="div5">
+      <img src="../2021.jpg" width="100px" alt="2021 이미지" />
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat ipsa
+        sunt, vel quas ad voluptates omnis nostrum repudiandae laboriosam fugit,
+        qui placeat dolorum reprehenderit voluptate quo exercitationem facilis
+        veritatis accusamus.
+      </p>
+    </div>
+  </body>
+</html>
