@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        display: flex;
+      }
+      nav {
+        /*display: inline-block; 지금 flex로 설정을 해놨기 때문에 필요가 없어짐*/
+        vertical-align: top;
+        border: 1px solid red;
+        padding-right: 20px;
+      }
+      nav ul {
+        list-style: none;
+      }
+      nav li {
+        border-bottom: 1px solid green;
+        padding: 5px;
+      }
+      nav li:hover {
+        background-color: #ddd;
+        cursor: progress;
+      }
+      section {
+        flex: 1;
+        border: 1px solid blue;
+        padding: 10px;
+      }
+      article {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>HOME</li>
+        <li>회사소개</li>
+        <li>공지사항</li>
+        <li>자유게시판</li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+        deserunt cupiditate quibusdam pariatur temporibus corrupti consequuntur
+        magni illum facere rem? Deleniti nostrum fuga ipsum ipsa facere
+        aspernatur ab repellat? Iste?
+      </article>
+      <article>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quod
+        voluptates sit quaerat labore, est esse tempore aspernatur! Earum
+        assumenda modi, quod nostrum a quis quibusdam omnis doloribus molestias
+        magnam.
+      </article>
+    </section>
+  </body>
+</html>

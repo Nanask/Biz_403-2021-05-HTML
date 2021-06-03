@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      section {
+        display: flex;
+        border: 1px solid green;
+        margin: 5px;
+      }
+      section#s1 {
+        /*
+          flex-item들의 크기가 container 보다 커졌을 때
+          기본값 : nowrap : item들의 크기를 조절하여 그냥 한번에 표시
+          wrap : item들의 크기를 적절히 조절하다가 안되면 줄바꿈하라
+           */
+        flex-wrap: wrap;
+        /*
+        direction과 wrap을 한번에 설정하기
+        */
+        flex-flow: row wrap;
+      }
+
+      section#s2 {
+        /*
+          flex-item을 어떻게 배치할래?
+          기본값 : row - 좌에서 우로
+          column : 위에서 아래로
+          clumn-reverse : 칼럼의 배치를 아래에서 위로
+          row-reverse : 칼럼의 배치를 우에서 좌로
+          */
+        flex-direction: column;
+      }
+      article {
+        /*
+          flex 다음에 보통 점수(1)를 설정하면 배울에 따라 배치
+          px값을 설정하면 고정폭으로 설정된다.
+          */
+        flex: 1;
+        border: 1px solid blue;
+        margin: 5px;
+      }
+      /*width가 flex위에 있으면 flex때문에 width가 무시되어버림*/
+      /*
+      section#s1 article {
+        width: 200px;
+      }
+      */
+    </style>
+  </head>
+  <body>
+    <section id="s1">
+      <article>가</article>
+      <article>나</article>
+      <article>다</article>
+      <article>라</article>
+      <article>마</article>
+    </section>
+    <section id="s2">
+      <article>A</article>
+      <article>B</article>
+      <article>C</article>
+      <article>D</article>
+      <article>E</article>
+    </section>
+  </body>
+</html>
