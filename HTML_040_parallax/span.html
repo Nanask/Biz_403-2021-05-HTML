@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Span Tag</title>
+    <style>
+    /*
+    span tag
+    문장내에 있는 일부의 text에 style을 지정하고자 할 때 주로 사용하는 tag
+    span tag 자체로는 아무런 효과나 모양이 보이지 않는다.
+    그러나 스타일을 지정하면 그 스타일을 사용할 수 있다.
+    */
+      span {
+        font-weight: bold;
+        border: 1px solid green;
+      }
+      span.box {
+          display: inline-block;
+          width: 200px;
+      }
+      span.hidden {
+          visibility: hidden;
+          width: 0vh;
+      }
+      p.visi:hover span.hidden {
+          visibility: visible;
+          width: 100px;
+          transition: 1s; /* 변화하는 속도 */
+
+      }
+    </style>
+  </head>
+  <body>
+    <p>Republic of <span>Korea</span>viva</p>
+    <p>Republic of <span class="box">Korea</span>viva</p>
+    <p class="visi">Republic of <span class="box hidden">Korea</span>viva</p>
+    <p>Republic of <b>Korea</b></p>
+    <p>Republic of <strong>Korea</strong></p>
+    <p>Republic of <em>Korea</em></p>
+    <p>Republic of <del>Korea</del></p>
+    <p>Republic of <smal>Korea</smal></p>
+    <p>Republic of <ins>Korea</ins></p>
+    <p>Republic of <sapn>Korea<sup></sup></p>
+        <p>Republic of <sapn>Korea<sub>s</sub></p>
+            <p>Republic of <mark>Korea</mark></p>       
+  </body>
+</html>
