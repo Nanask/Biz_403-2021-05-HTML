@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 80%;
+        margin: 10px auto;
+      }
+      table td {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>이름</td>
+        <td>전화번호</td>
+        <td>주소</td>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>010-0000-1111</td>
+        <td>서울특별시</td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    const doc = document;
+    let body = doc.querySelector("body");
+    /*
+      위에 보이는 table을 JS 코드를 사용하여 만드세요
+      */
+
+    let cell = doc.createElement("td");
+    let row = doc.createElement("tr");
+    let table = doc.createElement("table");
+
+    let row1 = doc.createElement("tr");
+
+    let cell1 = doc.createElement("td");
+    cell1.innerHTML = "이름";
+    row1.appendChild(cell1);
+
+    let cell2 = doc.createElement("td");
+    cell2.innerHTML = "전화번호";
+    row1.appendChild(cell2);
+
+    let cell3 = doc.createElement("td");
+    cell3.innerHTML = "주소";
+    row1.appendChild(cell3);
+
+    table.appendChild(row1);
+
+    // body.appendChild(table);
+
+    let row2 = doc.createElement("tr");
+
+    let cell4 = doc.createElement("td");
+    cell4.innerHTML = "홍길동";
+    row2.appendChild(cell4);
+
+    let cell5 = doc.createElement("td");
+    cell5.innerHTML = "00";
+    row2.appendChild(cell5);
+
+    let cell6 = doc.createElement("td");
+    cell6.innerHTML = "주소";
+    row2.appendChild(cell6);
+
+    table.appendChild(row2);
+
+    body.appendChild(table);
+
+    // -----------------------------------------------------------------------
+
+    // let tr1 = document.createElement("tr");
+    // let td1 = document.createElement("td");
+    // td1.innerHTML = "이름";
+
+    // let td2 = document.createElement("td");
+    // td2.innerHTML = "전화번호";
+
+    // let td3 = document.createElement("td");
+    // td3.innerHTML = "주소";
+
+    // tr1.appendChild(td1);
+    // tr1.appendChild(td2);
+    // tr1.appendChild(td3);
+
+    // table.appendChild(tr1);
+
+    // let tr2 = document.createElement("tr");
+
+    // tr2.appendChild((document.createElement("td");
+    // tr2.innerHTML = "홍길동";
+    // tr2.appendChild((document.createElement("td").innerHTML = "00"));
+    // tr2.appendChild((document.createElement("td").innerHTML = "서울"));
+
+    // table.appendChild(tr2);
+
+    // document.querySelector("body").appendChild("table");
+
+    // js 배열을 사용하여
+    const titles = ["이름", "전화번호", "주소"];
+    const date = ["홍길동", "010", "서울시"];
+
+    let table1 = doc.createElement("table");
+    let tr = doc.createElement("tr");
+    for (let i = 0; i < titles.length; i++) {
+      let td = doc.createElement("td");
+      td.innerHTML = titles[i];
+      tr.appendChild(td);
+    }
+    table1.appendChild(tr);
+
+    doc.querySelector("body").appendChild(table1);
+  </script>
+</html>
