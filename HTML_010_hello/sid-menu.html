@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      ul {
+        list-style: none;
+        position: relative;
+        width: 200px;
+      }
+      ul li {
+        width: 90%;
+        position: absolute;
+        /* absolute를 줘서 따로 위치를 조정할 수 있게 설정 */
+        left: 0;
+        transform: translateX(-90%);
+        /* transform: translateX(-90%); 를 사용해서 X값을 -시켜 왼쪽으로 붙이기 */
+        font-size: 20px;
+        padding: 1rem;
+        color: white;
+        font-weight: 900;
+        text-align: center;
+        transition: 1s;
+      }
+      ul li:hover {
+        transform: translateX(-10%);
+      }
+      ul li:nth-of-type(1) {
+        top: 30px;
+        background-color: red;
+      }
+      ul li:nth-of-type(2) {
+        top: 90px;
+        background: yellow;
+      }
+      ul li:nth-of-type(3) {
+        top: 150px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>우리나라만세</li>
+      <li>대한민국 만세</li>
+      <li>Republic of Korea</li>
+    </ul>
+  </body>
+</html>

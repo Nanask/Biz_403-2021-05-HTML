@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\..\\Sports_Project"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "HTML_060_slide"
+  }
+}
